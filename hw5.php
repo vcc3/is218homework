@@ -30,6 +30,93 @@ error_reporting(E_ALL);
     echo "is_null returns: ".is_null($inexistent)." for true"." and var4 returns: "       .is_null($var4)." for true";  
     
 echo '<hr>';
+// first switch example basic
+echo "This is a basic switch.";
+echo '<br>';
+$var = "Hello";
+
+switch ($var) {
+    case "Hello":
+        echo "Hello and welcome!";
+        break;
+    case "bye":
+        echo "goodbye!";
+        break;
+    case "null":
+        echo "null!";
+        break;
+    default:
+        echo "no greeting variable available!";
+}
+echo '<hr>';
+// second switch using isset
+// vars hold drink type
+echo "This is the switch for isset";
+echo '<br>';
+$vars = "soda";
+
+if(isset ($vars)){
+  switch ($vars) {
+    case "soda":
+        echo "to much soda will rot your teeth.";
+        break;
+    case "beer":
+        echo " guessing your a college kid.";
+        break;
+    case "hard liq":
+        echo "ahhhh a mans drink!";
+        break;
+    default:
+        echo "no variable available!";
+  }
+}
+// third switch  with empty 
+// vars hold value of null
+echo '<hr>';
+echo "This is the switch for null";
+echo '<br>';
+$value = null;
+switch (true) {
+    case $value === '0' :
+        echo ' variable was set to zero';
+        break;
+    case $value === '' :
+        echo 'variable was set to empty';
+        break;
+    case $value === null :
+        echo 'variable was set to null';
+        break;
+    default :
+        echo 'default';
+        break;
+}
+// third switch  with empty 
+// vars hold  nothing so empty
+echo '<hr>';
+echo "This is the switch for empty";
+echo '<br>';
+$value = '';
+switch (true) {
+    case $value === '0' :
+        echo 'variable was set to zero';
+        break;
+    case $value === '' :
+        echo 'variable was set to empty';
+        break;
+    case $value === null :
+        echo 'variable was set to null';
+        break;
+    default :
+        echo 'default';
+        break;
+}
+
+
+
+
+
+
+
 
 
 //var_dump(is_null($inexistent), is_null($var4));
