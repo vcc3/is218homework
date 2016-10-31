@@ -15,6 +15,13 @@ foo('hello');
 foo('hello', 'world', 'again');
 
 echo '<hr>';
+$files = glob('*.{php,csv}', GLOB_BRACE);
+ 
+echo " Second function of Global ";
+print_r($files);
+
+echo '<hr>';
+
 
 
 
