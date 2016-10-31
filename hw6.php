@@ -16,8 +16,8 @@ foo('hello', 'world', 'again');
 
 echo '<hr>';
 $files = glob('*.{php,csv}', GLOB_BRACE);
- 
-echo " Second function of Global ";
+$files =array_map('realpath',$files);
+echo " Second function of Global and full patchs ";
 print_r($files);
 
 echo '<hr>';
