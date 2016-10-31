@@ -86,9 +86,35 @@ print_r($newvar);
 
 
 echo '<hr>';
-// eighth function
+// eighth function compressed
+echo " function for compression";
+echo '<br>';
+$string =
+"'No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury, except in cases arising in the land or naval forces, or in the Militia, when in actual service in time of War or public danger; nor shall any person be subject for the same offense to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law; nor shall private property be taken for public use, without just compensation.'  ";
+ 
+$compressed = gzcompress($string);
+ 
+echo "Original size: ". strlen($string)."\n";
+/* prints
+Original size: 800
+*/
+ 
+ 
+ 
+echo "Compressed size: ". strlen($compressed)."\n";
+/* prints
+Compressed size: 418
+*/
+ 
+// getting it back
+$original = gzuncompress($compressed);
+
+
+
 echo '<hr>';
-// ninth function
+// ninth function shutdown
+echo " function for shutdown";
+echo '<br>';
 
 
 ?>
