@@ -53,14 +53,38 @@ echo "System time: ".
 echo '<hr>';
 // fifth function magic constants
 echo "this section is the debuggin portion, not real ouput for my file of hw6.php";
+echo '<br>';
 echo"  though can be seend that the other hr breaks and echo i have after this are then removed from the page that have no real use.";
-require_once('config/hw6.php');
-require_once(dirname(__File__) . '/config/hw6.php');
+//require_once('config/hw6.php');
+//require_once(dirname(__File__) . '/config/hw6.php');
 
 echo '<hr>';
-// sixth function
+// sixth function unique id
+echo " function for unique id";
+echo '<br>';
+echo uniqid('foo_');
+echo '<br>';
+echo uniqid('',true);
+echo '<br>';
+echo uniqid('bar_'.true);
 echo '<hr>';
-// seventh function
+// seventh function serialization
+echo " function for serialization";
+$myvar = array(
+    'hello user',
+    42,
+    array(0,'one'),
+    'pears'
+);
+$string = serialize($myvar);
+ echo '<br>';
+echo $string;
+$newvar = unserialize($string);
+ 
+print_r($newvar);
+
+
+
 echo '<hr>';
 // eighth function
 echo '<hr>';
