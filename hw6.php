@@ -33,7 +33,33 @@ for ($i = 0; $i < 100000; $i++) {
 }
 echo "Final: ".memory_get_usage()." bytes \n";
 echo "Peak: ".memory_get_peak_usage()." bytes \n";
+echo '<hr>';
+// fourth function cpu usage
+$start = microtime(true);
+// keep calling microtime for about 3 seconds
+while(microtime(true) - $start < 3) {
+ 
+}
+ 
+$data = getrusage();
+echo "User time: ".
+    ($data['ru_utime.tv_sec'] +
+     $data['ru_utime.tv_usec'] / 1000000);
+echo "System time: ".
+    ($data['ru_stime.tv_sec'] +
+     $data['ru_stime.tv_usec'] / 1000000);
 
+
+echo '<hr>';
+// fifth function
+echo '<hr>';
+// sixth function
+echo '<hr>';
+// seventh function
+echo '<hr>';
+// eighth function
+echo '<hr>';
+// ninth function
 
 
 ?>
