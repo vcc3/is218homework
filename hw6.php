@@ -115,6 +115,20 @@ echo '<hr>';
 // ninth function shutdown
 echo " function for shutdown";
 echo '<br>';
-
+$start_time = microtime(true);
+ 
+register_shutdown_function('my_shutdown');
+ 
+// do some stuff
+// ...
+ 
+ 
+function my_shutdown() {
+    global $start_time;
+ 
+    echo "execution took: ".
+            (microtime(true) - $start_time).
+            " seconds.";
+}
 
 ?>
