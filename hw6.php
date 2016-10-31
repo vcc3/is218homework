@@ -51,7 +51,12 @@ echo "System time: ".
 
 
 echo '<hr>';
-// fifth function
+// fifth function magic constants
+echo "this section is the debuggin portion, not real ouput for my file of hw6.php";
+echo"  though can be seend that the other hr breaks and echo i have after this are then removed from the page that have no real use.";
+require_once('config/hw6.php');
+require_once(dirname(__File__) . '/config/hw6.php');
+
 echo '<hr>';
 // sixth function
 echo '<hr>';
