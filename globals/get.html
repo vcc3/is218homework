@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Sign Up</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+
+<form action="#" method="get">
+<input type="text" name="name" placeholder="Your Name"></input><br/>
+<input type="text" name="email" placeholder="Your Email"></input><br/>
+<input type="text" name="contact" placeholder="Your Mobile"></input><br/>
+<input type="submit" name="submit" value="Submit"></input>
+</form>
+<!--- The get method is used to get the information php in a html file-->
+
+<?php
+if( $_GET["name"] || $_GET["email"] || $_GET["contact"])
+{
+echo "Welcome: ". $_GET['name']. ";
+echo "Your Email is: ". $_GET["email"]. ";
+echo "Your Mobile No. is: ". $_GET["contact"];
+}
+?>
+</div>
+</body>
+</html>
